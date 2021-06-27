@@ -73,9 +73,10 @@ class _HomePageState extends State<HomePage> {
               },
               icon: Icon(Icons.home, color: AppColors.primary),
             ),
-            GestureDetector(
+            InkWell(
               onTap: () {
-                print("coé");
+                print("tap");
+                Navigator.pushNamed(context, "/barcode_scanner");
               },
               child: Container(
                 height: 56,
@@ -83,10 +84,10 @@ class _HomePageState extends State<HomePage> {
                 decoration: BoxDecoration(
                     color: AppColors.primary,
                     borderRadius: BorderRadius.circular(5)),
-                child: IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.add_box_outlined,
-                        color: AppColors.background)),
+                child: Container(
+                  child:
+                      Icon(Icons.add_box_outlined, color: AppColors.background),
+                ),
               ),
             ),
             IconButton(
